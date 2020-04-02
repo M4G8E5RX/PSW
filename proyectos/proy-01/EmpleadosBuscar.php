@@ -1,8 +1,10 @@
 <?php
+mysqli_report(MYSQLI_REPORT_ALL); // Activa reporte de todo error que se presente
+
 $servidor="localhost";
 $usuario="root";
-$contraseña="";
-$basededatos="practicas";
+$contraseña="123456789";
+$basededatos="nomina";
 try{
 // Establece la conexion el servidor
 $conexion = new mysqli($servidor,$usuario,$contraseña,$basededatos);
@@ -43,6 +45,6 @@ else
 echo "Cliente no existe!!!";
 }
 catch(Exception $e){
-echo "$e->getMessage()";
+echo "Error: " . $e->getMessage();
 }
 ?>
