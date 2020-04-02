@@ -2,7 +2,7 @@
 mysqli_report(MYSQLI_REPORT_ALL); // Activa reporte de todo error que se presente
 try{
 // Crea conexión a la base de datos
-$conexion = new mysqli("localhost","root","", "practicas");
+$conexion = new mysqli("localhost","root","123456789", "nomina");
 // Crea consulta preparada con 3 parametros
 $consultaSQL = "INSERT INTO empleados (nombre, edad, sueldo) VALUES (?, ?, ?)";
 $comandoSQL = $conexion->prepare($consultaSQL);
