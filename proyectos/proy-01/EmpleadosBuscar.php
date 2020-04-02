@@ -26,7 +26,7 @@ $comandoSQL->execute();
 $comandoSQL->bind_result($numEmpleado, $nombre, $edad, $saldo);
 $resultado = $comandoSQL->fetch(); // obtiene los datos
 if ($resultado==true){
-echo "<fieldset>";
+echo "<fieldset style='width:200'>";
 echo "<table>";
 echo "<tr>";
 echo "<td>Nombre: </td> <td> $nombre </td>";
