@@ -13,8 +13,8 @@ if (!$conexion->connect_errno){
   if ($resultados){ // Verifica resultado de la consulta SQL
   //Recupera cada registro y lo muestra mediante índices de nombre de campo
   while ($registro = $resultados->fetch_assoc()) {
-  echo $registro['numEmpleado'] . " " . $registro['nombre'] . " " .$registro['edad'] .
-  "<br/>";
+    echo $registro['numEmpleado'] . " " . $registro['nombre'] . " " .$registro['edad'] .
+    "<br/>";
   }
   echo "Numero de registros: $resultados->num_rows";
   $resultados->free(); // Libera recursos de la consulta
