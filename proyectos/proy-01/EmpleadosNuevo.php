@@ -1,10 +1,7 @@
 <?php
-mysqli_report(MYSQLI_REPORT_ALL); // Activa reporte de todo error que se presente
-$servidor="localhost";
-$usuario="root";
-$contraseña="123456789";
-$basededatos="nomina";
+include ("configuracion.php");
 
+mysqli_report(MYSQLI_REPORT_ALL); // Activa reporte de todo error que se presente
 try{
 // Crea conexión a la base de datos
 $conexion = new mysqli($servidor,$usuario,$contraseña,$basededatos);
