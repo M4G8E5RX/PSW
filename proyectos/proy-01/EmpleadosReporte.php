@@ -14,7 +14,7 @@ if (!$conexion->connect_errno){
   //Recupera cada registro y lo muestra mediante índices de nombre de campo
   while ($registro = $resultados->fetch_assoc()) {
     echo $registro['numEmpleado'] . " " . $registro['nombre'] . " " .$registro['edad'] .
-    "<br/>";
+     "<a href='frmEmpleadosEditar.php?numEmpleado=$registro[numEmpleado]'> Editar </a>" . "<br/>";
   }
   echo "Numero de registros: $resultados->num_rows";
   $resultados->free(); // Libera recursos de la consulta
