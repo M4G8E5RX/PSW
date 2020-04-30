@@ -1,6 +1,5 @@
 <?php
     // Activa reporte de todo error que se presente
-    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT ); 
     include "config.php";
     try{
         // Crea conexión a la base de datos
