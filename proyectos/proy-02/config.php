@@ -1,9 +1,9 @@
 <?php
 
-    $usuario = "gerardo";
-    $contraseña ="123456789";
+    $usuario = "userdb";
+    $contraseña ="12AB34cd*";
     $servidor = "mysql.miservidor.mx";
-    $basededatos = "gerardo";
+    $basededatos = "test";
  
 ?>
 
