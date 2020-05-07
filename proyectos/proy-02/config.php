@@ -5,7 +5,6 @@
     $servidor="mysql.miservidor.mx";
     $usuario = "userdb";
     $contraseña ="12AB34cd*";
-    $servidor = "mysql.miservidor.mx";
     $basededatos = "test";
  
 ?>

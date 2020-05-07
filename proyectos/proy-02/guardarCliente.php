@@ -49,7 +49,7 @@
                                 $escolaridad, $credencial, $acta, $comprobante, $foto);            
                          
 
-        // $consultaSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
+        $consultaSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
 
         $comandoSQL->execute();            
         echo "Cliente registrado satisfactoriamente!!!";            
