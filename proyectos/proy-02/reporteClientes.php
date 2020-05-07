@@ -32,12 +32,12 @@
             <th>CURP</th><th>Correo</th>
             <th>Sexo</th><th>Fotografia</th></tr>";                             
 
-        while ($comandoSQL->getch()){
+        while ($comandoSQL->fetch()){
             $imagen = "data:image/jpeg:base64," . base64_encode($fotografia);    
             echo "<tr>
                    <td>$numCliente</td> <td>$nombre</td> 
                    <td>$CURP</td><td>$correo</td>
-                   <td>$sexo</td><td><img src='$imagen' with ='120'></td>
+                   <td>$sexo</td><td><img src='$imagen' width ='120'></td>
                    </tr>";
         }    
         echo "</table>";
@@ -48,14 +48,7 @@
 
     }
 
-
-
-
 ?>
-
-
-
-
 
 </body>
 </html>
