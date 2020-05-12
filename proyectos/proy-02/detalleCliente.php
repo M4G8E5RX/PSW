@@ -25,13 +25,13 @@
         $comandoSQL->bind_param("i",$id);            
         //Ejecutamos consulta
         $comandoSQL->execute();
-
+        $comandoSQL->bind_result($numCliente, $nombre, 
+        $CURP, $correo, 
+        $sexo, $fotografia);
         $resultado = $comandoSQL->fetch();
 
         if ($resultado==TRUE){
-            $comandoSQL->bind_result($numCliente, $nombre, 
-                                 $CURP, $correo, 
-                                 $sexo, $fotografia);
+            
           
             $imagen = "data:image/jpeg;base64," . base64_encode($fotografia);    
            
