@@ -48,7 +48,6 @@
                                 $nombre, $CURP, $correo, $sexo, $fechaNacimiento, 
                                 $escolaridad, $credencial, $acta, $comprobante, $foto);            
                          
-                                echo $consultaSQL;
 
         $comandoSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
 
