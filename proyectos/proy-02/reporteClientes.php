@@ -32,7 +32,7 @@
             <th>Sexo</th><th>Fotografia</th></tr>";                             
 
         while ($comandoSQL->fetch()){
-            $imagen = "data:image/jpeg:base64," . base64_encode($fotografia);    
+            $imagen = "data:image/jpeg;base64," . base64_encode($fotografia);    
             echo "<tr>
                    <td>$numCliente</td> <td>$nombre</td> 
                    <td>$CURP</td><td>$correo</td>
