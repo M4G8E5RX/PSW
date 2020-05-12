@@ -55,6 +55,7 @@
         echo "Cliente registrado satisfactoriamente!!!";            
     }
     catch(Exception $e){
+        
         echo "Error" . $e->getMessage(); 
         
     }
