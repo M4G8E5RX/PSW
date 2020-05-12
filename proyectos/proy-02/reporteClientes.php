@@ -8,13 +8,13 @@
 <body>
 
 <?php
-    include "config.php"
+    include "config.php";
     try{
         // Establecer conexion
         $conexion = new mysqli($servidor, $usuario, $contraseña, $basededatos);    
         // Crear consulta preparada
         $consultaSQL = "SELECT 
-                            nomCliente, nombre, 
+                            numCliente, nombre, 
                             CURP, correo, 
                             sexo, fotografia
                             FROM clientes";
@@ -24,8 +24,7 @@
         $comandoSQL->execute();
         $comandoSQL->bind_result($numCliente, $nombre, 
                                  $CURP, $correo, 
-                                 $sexo, $fotografia):
-
+                                 $sexo, $fotografia);
         echo "<table>"; // encabezado de la tabla
         echo "<tr>
             <th>ID</th><th>Nombre</th>

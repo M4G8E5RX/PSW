@@ -48,8 +48,9 @@
                                 $nombre, $CURP, $correo, $sexo, $fechaNacimiento, 
                                 $escolaridad, $credencial, $acta, $comprobante, $foto);            
                          
+                                echo $consultaSQL;
 
-        $consultaSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
+        $comandoSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
 
         $comandoSQL->execute();            
         echo "Cliente registrado satisfactoriamente!!!";            
