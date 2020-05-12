@@ -34,7 +34,8 @@
         while ($comandoSQL->fetch()){
             $imagen = "data:image/jpeg;base64," . base64_encode($fotografia);    
             echo "<tr>
-                   <td>$numCliente</td> <td>$nombre</td> 
+                   <td>$numCliente</td> 
+                   <td><a href='detalleCliente.php?id=$numCliente'>$nombre</a></td> 
                    <td>$CURP</td><td>$correo</td>
                    <td>$sexo</td><td><img src='$imagen' width ='120'></td>
                    </tr>";
