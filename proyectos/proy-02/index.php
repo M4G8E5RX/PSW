@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-
+    <?php include "encabezado.php"; ?>
+    <h2>Menu</h2>
+    <hr/>
     <ul>
-        <li><a href='frmNuevoCliente.html'>Nuevo Cliente</a> </li>
+        <li><a href='frmNuevoCliente.php'>Nuevo Cliente</a> </li>
         <li><a href='reporteClientes.php'>Reporte Clientes</a> </li>
     </ul>
 

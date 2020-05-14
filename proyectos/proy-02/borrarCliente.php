@@ -6,6 +6,11 @@
     <title>Borrar Cliente</title>
 </head>
 <body>
+
+<h2>Borrar Cliente</h2>
+    <hr/>
+<?php include "encabezado.php"; ?>
+
 <?php
     include "config.php";
     try{

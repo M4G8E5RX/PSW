@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Nuevo Cliente</h1>
+    <?php include "encabezado.php"; ?>
+
+    <h2>Nuevo Cliente</h2>
     <hr/>
 
     <form action='guardarCliente.php' method='post' enctype="multipart/form-data" >

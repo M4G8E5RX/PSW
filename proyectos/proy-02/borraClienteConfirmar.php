@@ -6,6 +6,14 @@
     <title>Borrar Confirmacion</title>
 </head>
 <body>
+
+
+<?php include "encabezado.php"; ?>
+
+<h2>Borrar Cliente</h2>
+    <hr/>
+
+
 <?php
     include "config.php";
     try{

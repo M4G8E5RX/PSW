@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+<?php include "encabezado.php"; ?>
+<h2>Información de Cliente</h2>
+    <hr/>
 <?php
     include "config.php";
     try{
