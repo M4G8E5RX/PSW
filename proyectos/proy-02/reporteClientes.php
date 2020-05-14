@@ -35,9 +35,12 @@
             $imagen = "data:image/jpeg;base64," . base64_encode($fotografia);    
             echo "<tr>
                    <td>$numCliente</td> 
-                   <td><a href='detalleCliente.php?id=$numCliente'>$nombre</a></td> 
+                   <td>$nombre</td> 
                    <td>$CURP</td><td>$correo</td>
                    <td>$sexo</td><td><img src='$imagen' width ='120'></td>
+                   <td><a href='detalleCliente.php?id=$numCliente'>Detalles</a></td> 
+                   <td><a href='borraClienteConfirmar.php?id=$numCliente'>Borrar</a></td> 
+                 
                    </tr>";
         }    
         echo "</table>";

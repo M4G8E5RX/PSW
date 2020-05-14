@@ -50,7 +50,7 @@
             echo "<tr>
                 <td>Fotografia</td><td><img src='$imagen' whith='120'></td>
             </tr>";
-
+            
             echo "</table>";
   
 
