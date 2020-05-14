@@ -10,13 +10,17 @@
     include "config.php";
     try{
         // Establecer conexion
-        $conexion = new mysqli($servidor, $usuario, $contraseña, $basededatos);    
+        $conexion = new mysqli($servidor, 
+                                $usuario, 
+                                $contraseña, 
+                                $basededatos);    
         // Crear consulta preparada
         $consultaSQL = "SELECT 
-                            numCliente, nombre, 
+                            numCliente, nombre,
                             CURP, correo, 
                             sexo, fotografia
-                            FROM clientes WHERE numCliente=?";
+                            FROM clientes 
+                            WHERE numCliente=?";
 
         $id = $_GET['id'];
         echo $consultaSQL;
@@ -31,7 +35,6 @@
         $resultado = $comandoSQL->fetch();
 
         if ($resultado==TRUE){
-            
           
             $imagen = "data:image/jpeg;base64," . base64_encode($fotografia);    
            
