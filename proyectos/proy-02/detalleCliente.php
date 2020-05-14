@@ -23,7 +23,6 @@
                             WHERE numCliente=?";
 
         $id = $_GET['id'];
-        echo $consultaSQL;
         // preparamos consulta
         $comandoSQL = $conexion->prepare($consultaSQL);
         $comandoSQL->bind_param("i",$id);            
