@@ -42,6 +42,7 @@
                    <td>$sexo</td><td><img src='$imagen' width ='120'></td>
                    <td><a href='detalleCliente.php?id=$numCliente'>Detalles</a></td> 
                    <td><a href='borraClienteConfirmar.php?id=$numCliente'>Borrar</a></td> 
+                   <td><a href='editarCliente.php?id=$numCliente'>Editar</a></td> 
                  
                    </tr>";
         }    
