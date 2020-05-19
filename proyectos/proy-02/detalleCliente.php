@@ -51,7 +51,7 @@
                     <td>CURP</td><td>$CURP</td>
                 </tr>";
             echo "<tr>
-                <td>Fotografia</td><td><img src='$imagen' whith='120'></td>
+                <td>Fotografia</td><td><img src='$imagen' width='120'></td>
             </tr>";
             
             echo "</table>";
