@@ -57,7 +57,7 @@
         $foto = null;            
 
         
-        if ($_FILE['foto']['size']>0){
+        if ($_FILES['foto']['size']>0){
             $comandoSQL = $conexion->prepare($consultaSQLconFoto);                    
             $comandoSQL->bind_param("ssssssiiibi", 
                                 $nombre, $CURP, $correo, $sexo, $fechaNacimiento, 
@@ -65,7 +65,7 @@
             $comandoSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
         }
         else{
-            $comandoSQL = $conexion->prepare($consultaSQLFoto);                        
+            $comandoSQL = $conexion->prepare($consultaSQLsinFoto);                        
             $comandoSQL->bind_param("ssssssiiii", 
             $nombre, $CURP, $correo, $sexo, $fechaNacimiento, 
             $escolaridad, $credencial, $acta, $comprobante, $numCliente);            
