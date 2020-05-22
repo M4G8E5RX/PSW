@@ -84,13 +84,17 @@
                 <tr>
                     <td>Escolaridad</td>
                     <td>
-                        <select name='escolaridad'>
-                            <option value='Primaria'>Primaria</option>
-                            <option value='Secundaria'>Secundaria</option>
-                            <option value='Preparatoria'>Preparatoria</option>
-                            <option value='Licenciatura'>Licenciatura</option>
-                            <option value='Posgrado'>Progrado</option>
-                        </select>    
+                        <select name='escolaridad'>";
+
+                        $opciones = array('Primaria', 'Secundaria',
+                                          'Preparatoria', 'Licenciatura',
+                                          'Posgrado'); 
+                         for ($i=0; count($opciones); $i++){ 
+                            $sel = ($opciones[i]==$escolaridad)?'selected':'';   
+                            echo "<option value='$opciones[i]'>$opciones[i] $sel</option>";
+                         }   
+
+                echo "</select>    
                     </td>
                 </tr>
                 <tr>
