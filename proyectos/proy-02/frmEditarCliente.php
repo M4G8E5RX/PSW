@@ -89,9 +89,9 @@
                         $opciones = array('Primaria', 'Secundaria',
                                           'Preparatoria', 'Licenciatura',
                                           'Posgrado'); 
-                         for ($i=0; count($opciones); $i++){ 
-                            $sel = ($opciones[i]==$escolaridad)?'selected':'';   
-                            echo "<option value='$opciones[i]'>$opciones[i] $sel</option>";
+                         for ($i=0; $i<count($opciones); $i++){ 
+                            $sel = ($opciones[$i]==$escolaridad)?'selected':'';   
+                            echo "<option value='$opciones[$i]' $sel >$opciones[$i] </option>";
                          }   
 
                 echo "</select>    
