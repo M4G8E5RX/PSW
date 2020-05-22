@@ -63,6 +63,9 @@
              <legend>Datos de identificación</legend>   
             <table>
                 <tr>
+                    <td>Num. Cuenta</td><td><input value='$numCliente' readonly type='text' name='numCliente'></td>
+                </tr>
+                <tr>
                     <td>Nombre </td><td><input value='$nombre' type='text' name='nombre' required></td>
                 </tr>
                 <tr>
