@@ -56,23 +56,26 @@
         $comprobante = isset($_POST['comprobante'])? 1: 0 ;
         $foto = null;            
 
-        $comandoSQL = $conexion->prepare($consultaSQL);                    
         
-
-        $comandoSQL->bind_param("ssssssiiib", 
+        if ($_FILE['foto']['size']>0){
+            $comandoSQL = $conexion->prepare($consultaSQLconFoto);                    
+            $comandoSQL->bind_param("ssssssiiibi", 
                                 $nombre, $CURP, $correo, $sexo, $fechaNacimiento, 
-                                $escolaridad, $credencial, $acta, $comprobante, $foto);            
-                         
+                                $escolaridad, $credencial, $acta, $comprobante, $foto, $numCliente);            
+            $comandoSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
+        }
+        else{
+            $comandoSQL = $conexion->prepare($consultaSQLFoto);                        
+            $comandoSQL->bind_param("ssssssiiii", 
+            $nombre, $CURP, $correo, $sexo, $fechaNacimiento, 
+            $escolaridad, $credencial, $acta, $comprobante, $numCliente);            
 
-        $comandoSQL->send_long_data(9,file_get_contents($_FILES['foto']['tmp_name'])) ;           
-
+        }
         $comandoSQL->execute();            
-        echo "Cliente registrado satisfactoriamente!!!";            
+        echo "Cliente Actualizado satisfactoriamente!!!";            
     }
     catch(Exception $e){
-        
-        echo "Error" . $e->getMessage(); 
-        
+       echo "Error" . $e->getMessage(); 
     }
 ?>
 </body>
